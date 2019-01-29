@@ -63,7 +63,7 @@ func TestDockebeatCloseMethod(t *testing.T) {
 
 func TestDockbeatValidVersionTooOld(t *testing.T) {
 	// GIVEN
-	var versions = []string{"1.3.0", "1.4.2", "1.4.9"}
+	var versions = []string{"1.3.0", "1.4.2", "1.4.9","1.4.1","1.5.3"}
 	var beat = getEmptyDockbeat()
 
 	for _, version := range versions {
@@ -183,6 +183,6 @@ func getEmptyDockbeat() Dockbeat {
 			CalculatorFactory: calculator.CalculatorFactoryImpl{},
 			Period:            time.Second,
 		},
-		minimalDockerVersion: SoftwareVersion{major: 1, minor: 5},
+		minimalDockerVersion: SoftwareVersion{major: 1, minor: 2},
 	}
 }

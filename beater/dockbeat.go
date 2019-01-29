@@ -72,7 +72,7 @@ func New() *Dockbeat {
 func (bt *Dockbeat) Config(b *beat.Beat) error {
 
 	// Requires Docker 1.9 minimum
-	bt.minimalDockerVersion = SoftwareVersion{major: 1, minor: 9}
+	bt.minimalDockerVersion = SoftwareVersion{major: 1, minor: 2}
 
 	err := cfgfile.Read(&bt.beatConfig, "")
 	if err != nil {
